@@ -10,19 +10,28 @@ export interface Props {
   icon?: React.ReactNode;
   color?: Color;
   className?: string;
+  inline?: boolean;
 }
 
 export function TextTip({
   color = 'orange',
   icon = AlertCircle,
+  inline = true,
   className,
   children,
 }: PropsWithChildren<Props>) {
   return (
-    <p className={clsx('small inline-flex items-center gap-1', className)}>
+    <div
+      className={clsx(
+        className,
+        'small items-center gap-1',
+        inline ? 'inline-flex' : 'flex'
+      )}
+    >
       <Icon icon={icon} mode={getMode(color)} />
+
       <span className="text-muted">{children}</span>
-    </p>
+    </div>
   );
 }
 

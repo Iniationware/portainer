@@ -25,6 +25,7 @@ import { Slider } from '@@/form-components/Slider';
 import { TagButton } from '@@/TagButton';
 import { BETeaserButton } from '@@/BETeaserButton';
 import { CodeEditor } from '@@/CodeEditor';
+import { EnvironmentVariablesFieldset } from '@@/form-components/EnvironmentVariablesFieldset/EnvironmentVariablesFieldset';
 
 import { fileUploadField } from './file-upload-field';
 import { switchField } from './switch-field';
@@ -174,5 +175,15 @@ export const componentsModule = angular
       'onChange',
       'value',
       'height',
+    ])
+  )
+  .component(
+    'reactEnvironmentVariablesPanel',
+    r2a(EnvironmentVariablesFieldset, [
+      'explanation',
+      'onChange',
+      'showHelpMessage',
+      'value',
+      'errors',
     ])
   ).name;
