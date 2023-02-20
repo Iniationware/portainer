@@ -143,7 +143,6 @@ export type Environment = {
   Kubernetes: KubernetesSettings;
   Nomad: NomadSettings;
   PublicURL?: string;
-  IsEdgeDevice?: boolean;
   UserTrusted: boolean;
   AMTDeviceGUID?: string;
   Edge: EnvironmentEdge;

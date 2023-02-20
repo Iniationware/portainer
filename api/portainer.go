@@ -374,8 +374,7 @@ type (
 		LastCheckInDate int64
 		// QueryDate of each query with the endpoints list
 		QueryDate int64
-		// IsEdgeDevice marks if the environment was created as an EdgeDevice
-		IsEdgeDevice bool
+
 		// Whether the device has been trusted or not by the user
 		UserTrusted bool
 
@@ -401,6 +400,9 @@ type (
 
 		// Deprecated in DBVersion == 22
 		Tags []string `json:"Tags"`
+
+		// Deprecated v2.18
+		IsEdgeDevice bool
 	}
 
 	EnvironmentEdgeSettings struct {
