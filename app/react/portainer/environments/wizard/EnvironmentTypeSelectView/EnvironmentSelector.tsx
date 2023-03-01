@@ -3,7 +3,7 @@ import { FormSection } from '@@/form-components/FormSection';
 
 import { environmentTypes } from './environment-types';
 
-export type EnvironmentSelectorValue = typeof environmentTypes[number]['id'];
+export type EnvironmentSelectorValue = (typeof environmentTypes)[number]['id'];
 
 interface Props {
   value: EnvironmentSelectorValue[];

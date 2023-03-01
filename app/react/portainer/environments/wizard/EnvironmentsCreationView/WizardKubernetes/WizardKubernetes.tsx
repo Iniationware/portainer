@@ -73,7 +73,7 @@ export function WizardKubernetes({ onCreate }: Props) {
     </div>
   );
 
-  function getTab(type: typeof options[number]['value']) {
+  function getTab(type: (typeof options)[number]['value']) {
     switch (type) {
       case EnvironmentCreationTypes.AgentEnvironment:
         return (
